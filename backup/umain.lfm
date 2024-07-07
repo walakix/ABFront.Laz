@@ -1,0 +1,236 @@
+object Form1: TForm1
+  Left = 364
+  Height = 680
+  Top = 129
+  Width = 935
+  Caption = 'AB Kez rest v0.1'
+  ClientHeight = 680
+  ClientWidth = 935
+  LCLVersion = '3.2.0.0'
+  object leLink: TLabeledEdit
+    Left = 8
+    Height = 26
+    Top = 24
+    Width = 299
+    EditLabel.Height = 16
+    EditLabel.Width = 299
+    EditLabel.Caption = 'Base Link:'
+    TabOrder = 0
+    Text = 'http://141.147.47.82/AB/'
+  end
+  object leAPIKey: TLabeledEdit
+    Left = 312
+    Height = 26
+    Top = 24
+    Width = 155
+    EditLabel.Height = 16
+    EditLabel.Width = 155
+    EditLabel.Caption = 'API Key:'
+    TabOrder = 1
+  end
+  object btn_getall: TButton
+    Left = 8
+    Height = 25
+    Top = 58
+    Width = 75
+    Caption = 'getall'
+    TabOrder = 2
+    OnClick = btn_getallClick
+  end
+  object btn_getlast: TButton
+    Left = 88
+    Height = 25
+    Top = 58
+    Width = 75
+    Caption = 'getlast'
+    TabOrder = 3
+    OnClick = btn_getlastClick
+  end
+  object btn_getone: TButton
+    Left = 232
+    Height = 25
+    Top = 58
+    Width = 75
+    Caption = 'getone'
+    TabOrder = 4
+    OnClick = btn_getoneClick
+  end
+  object se_id: TSpinEdit
+    Left = 168
+    Height = 26
+    Top = 57
+    Width = 64
+    MaxValue = 2147483647
+    MinValue = -2147483648
+    TabOrder = 5
+  end
+  object btn_deleteone: TButton
+    Left = 312
+    Height = 25
+    Top = 58
+    Width = 75
+    Caption = 'deleteone'
+    TabOrder = 6
+    OnClick = btn_deleteoneClick
+  end
+  object btn_deleteall: TButton
+    Left = 392
+    Height = 25
+    Top = 58
+    Width = 75
+    Caption = 'deleteall'
+    TabOrder = 7
+    OnClick = btn_deleteallClick
+  end
+  object btn_writeone: TButton
+    Left = 856
+    Height = 25
+    Top = 35
+    Width = 75
+    Caption = 'writeone'
+    TabOrder = 8
+    OnClick = btn_writeoneClick
+  end
+  object btn_updateone: TButton
+    Left = 856
+    Height = 25
+    Top = 58
+    Width = 75
+    Caption = 'updateone'
+    TabOrder = 9
+  end
+  object sgDatas: TStringGrid
+    Left = 8
+    Height = 272
+    Top = 89
+    Width = 923
+    ColCount = 6
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goRowSelect, goSmoothScroll]
+    RowCount = 1
+    ScrollBars = ssVertical
+    TabOrder = 10
+    OnClick = sgDatasClick
+    ColWidths = (
+      34
+      50
+      199
+      64
+      160
+      396
+    )
+    Cells = (
+      6
+      0
+      0
+      'id'
+      1
+      0
+      'intdata'
+      2
+      0
+      'floatdata'
+      3
+      0
+      'booldata'
+      4
+      0
+      'time'
+      5
+      0
+      'comment'
+    )
+  end
+  object sbInfo: TStatusBar
+    Left = 0
+    Height = 24
+    Top = 656
+    Width = 935
+    Panels = <    
+      item
+        Width = 50
+      end    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object btn_Quit: TButton
+    Left = 856
+    Height = 25
+    Top = 0
+    Width = 75
+    Caption = 'Quit'
+    TabOrder = 12
+    OnClick = btn_QuitClick
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 280
+    Top = 369
+    Width = 920
+    ReadOnly = True
+    ScrollBars = ssBoth
+    TabOrder = 13
+  end
+  object se_intdata: TSpinEdit
+    Left = 472
+    Height = 26
+    Top = 57
+    Width = 50
+    MaxValue = 2147483647
+    MinValue = -2147483648
+    TabOrder = 14
+  end
+  object fse_floatdata: TFloatSpinEdit
+    Left = 528
+    Height = 26
+    Top = 57
+    Width = 88
+    MaxValue = 9.22337203685478E19
+    MinValue = -9.22337203685478E18
+    TabOrder = 15
+  end
+  object se_booldata: TSpinEdit
+    Left = 618
+    Height = 26
+    Top = 57
+    Width = 56
+    MaxValue = 1
+    TabOrder = 16
+  end
+  object Label1: TLabel
+    Left = 472
+    Height = 16
+    Top = 40
+    Width = 46
+    Caption = 'intdata:'
+  end
+  object Label2: TLabel
+    Left = 528
+    Height = 16
+    Top = 40
+    Width = 56
+    Caption = 'floatdata'
+  end
+  object Label3: TLabel
+    Left = 616
+    Height = 16
+    Top = 40
+    Width = 58
+    Caption = 'booldata:'
+  end
+  object e_comment: TEdit
+    Left = 680
+    Height = 26
+    Top = 56
+    Width = 168
+    TabOrder = 17
+  end
+  object Label4: TLabel
+    Left = 680
+    Height = 16
+    Top = 40
+    Width = 59
+    Caption = 'comment:'
+  end
+end
